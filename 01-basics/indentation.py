@@ -7,7 +7,7 @@ neodsazeným řádkem.
 Počet mezer v odsazení je libovolný, ale musí být konzistentní aspoň v rámci jednoho bloku.
 K odsazení musí být použita minimálně jedna mezera.
 Obvykle se k odsazování používá tubulátor, který bývá nejčastěji nastaven na 4 mezery.
-'''
+
 
 # Odsazení bloku kódu uvnitř cyklu a podmínky
 for i in range(1, 10):
@@ -18,7 +18,7 @@ for i in range(1, 10):
         print('odd')
 
 
-'''
+
 Dokumentační řetězce v Pythonu (docstrings)
 
 Víceřádkový řetězec následující hned po záhlaví funkce v Pythonu je nazýván docstring (documentation string neboli 
@@ -27,7 +27,7 @@ Přestože je to nepovinný doplněk programového kódu, je považován za "goo
 zásad, které by měl programátor v Pythonu dodržovat.
 Docstrings se zapisují mezi trojnásobné uvozovky (tedy podobně jako komentáře).
 Tyto dokumentační řetězce jsou přístupné prostřednictvím "magického" __doc__ atributu funkce.    
-'''
+
 
 # Odsazení bloku kódu uvnitř funkce a použití docstring
 def greet(name):
@@ -41,6 +41,7 @@ def greet(name):
 print(greet.__doc__)
 # Vyvolá funkci greet s parametrem 'Hilda'
 greet('Hilda')
+'''
 
 """
 Cvičení 2:
@@ -50,3 +51,16 @@ aspoň jednu podmínku if a funkci print(). Dodržte správné odsazování kód
 Do konzole vypište nejprve docstring vaší funkce a potom zavolejte funkci samotnou.   
 """
 
+for y in range(1,20):
+    print(y)
+    if y % 2 == 0:
+        print('sude')
+    else:
+        print('liche')
+
+def desc():
+    """
+    Tato funkce rozlisuje suda a licha cisla.
+    """
+
+print(desc.__doc__)

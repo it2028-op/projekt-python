@@ -107,19 +107,19 @@ second_name = "  Trump"
 '''
 Proto jedinou cestou, jak vytvářet nové řetězce, je jejich kombinování, které je velice jednoduché a přitom efektivní:
 '''
-# print('R' + first_name[1:])
+print('R' + first_name[1:])
 
 # Formátovaný výstup, použití řetězcových funkcí
-# print(f"{first_name.upper().rstrip()} {second_name.lower().lstrip()} {5 * 4} {len(message)}")
+print(f"{first_name.upper().rstrip()} {second_name.lower().lstrip()} {5 * 4} {len(message)}")
 
 # Nalezení pozice podřetězce v řetězci
-# print(first_name.find("na"))
+print(first_name.find("na"))
 
-# Nahrazení podřetězce v řetězci
-# print(first_name.upper().replace("D", "*"))
+#Nahrazení podřetězce v řetězci
+print(first_name.upper().replace("D", "*"))
 
 # Zjištění výskytu podřetězce
-# print("na" not in first_name)
+print("na" not in first_name)
 
 '''
 Python umí pracovat s Unicode řetězci úplně stejným způsobem jako s obyčejnými řetězci. 
@@ -158,3 +158,40 @@ funkční kód, tím lepší).
 3. Vytvořte funkci, která vygeneruje náhodná hesla pro počet osob zadaný v parametru tak, aby heslo začínalo
    3 velkými písmeny, pokračovalo 3 malými písmeny, jedním speciálním znakem (-/+*) a končilo 3 náhodnými číslicemi.
 '''
+"""
+from unidecode import unidecode
+
+datum = input('Zadejte datum DD. MM. YYYY: ')
+formDatum = datum.split('. ')
+print('{}-{}-{}'.format(formDatum[1], formDatum[0], formDatum[2]))
+
+text = input('Zadejte libovolné sousloví: ')
+
+def camelcase(text):
+    camCase = ''.join(word[0].upper() + word[1:] for word in text)
+    return camCase
+
+print(unidecode(text.replace(' ', '_').lower()))
+print(unidecode(camelcase(text.split())))
+"""
+import random
+import string
+
+
+lide = input("Zadejte počet osob: ")
+def hesla(pocet):
+    hesla = []
+    for i in range(pocet):
+        password = ""
+        for j in range(3):
+            password += random.choice(string.ascii_uppercase)
+        for j in range(3):
+            password += random.choice(string.ascii_lowercase)
+        password += random.choice(string.punctuation)
+        for j in range(3):
+            password += random.choice(string.digits)
+        hesla.append(password)
+    return hesla
+
+
+print(hesla(int(lide)))
