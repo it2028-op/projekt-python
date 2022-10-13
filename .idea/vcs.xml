@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/01-basics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python-ukol" vcs="Git" />
   </component>
 </project>
